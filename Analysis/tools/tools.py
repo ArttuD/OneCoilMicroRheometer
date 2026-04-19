@@ -12,6 +12,10 @@ import scipy
 
 from scipy.ndimage import gaussian_filter1d
 
+mpl.rcParams['font.family'] = 'serif'
+mpl.rcParams['font.serif'] = ['Times New Roman']
+sns.set_theme(style="whitegrid", palette="colorblind", font="Times New Roman")
+
 radius = 5.5e-6 #Bead size m
 rho = 1.3 * 1000 #Bead density kg/m^3
 mu_0 = 4*np.pi*1e-7 #permeability
@@ -40,15 +44,13 @@ end_w = width
 start_h = 0.003 - height/2; end_h = 0.003 + height/2
 
 
-def add_panel_labels(axes, labels=None, xy=(-0.1, 1.1), fontsize=12, weight="bold"):
+def add_panel_labels(axes, labels=None, xy=(-0.1, 1.1), fontsize=24, weight="bold"):
     ax_list = np.ravel(axes)
     if labels is None:
         labels = list(string.ascii_uppercase[:len(ax_list)])
     for ax, lab in zip(ax_list, labels):
         ax.text(xy[0], xy[1], lab, transform=ax.transAxes,
-                fontsize=fontsize, fontweight=weight, va="top", ha="left")
-
-sns.set_theme(style="whitegrid", palette="colorblind")
+                fontsize=fontsize, fontweight="bold", va="top", ha="left", fontfamily="serif", fontname="Times New Roman")
 
 # Helper: scientific y-axis with math text
 def set_sci_y(ax):
