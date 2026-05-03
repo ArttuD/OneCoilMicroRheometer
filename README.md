@@ -2,7 +2,7 @@
 
 One coil microrheometer software and analysis related to research publication: DOI YYY.
 
-***Data avaibility**: Data can be dowloaded from YYYY . This "results" file needs to be placed in "./Analysis/" to draw the images and load the models correctly. Hardware schematics available in https://github.com/ArttuD/microrheology.git
+***Data avaibility**: Data available in OSF at 10.17605/OSF.IO/S9P65. This "results" file needs to be placed in "./Analysis/" to draw the images and load the models correctly. Hardware schematics available in https://github.com/ArttuD/microrheology.git
 
 **Comsol**: Comsol simualtion used to numerically solve magnetic fields related to the setup
 
